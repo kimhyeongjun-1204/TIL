@@ -1,6 +1,6 @@
 ## 💡H2 데이터베이스와 JPA 연동하기 
 
-## application.properties 환경 설정 
+## 🌟application.properties 환경 설정 
 
 ### 1️⃣H2 데이터베이스 설정 
 ```properties
@@ -47,3 +47,31 @@ spring.jpa.properties.hibernate.show_sql=true     # 쿼리 로그 출력
 
 🔹 밑 3줄 : Hiberate가 실행하는 SQL 쿼리를 로그에 출력하게 설정함. 
 
+> 💡Hibernate란? : JPA의 구현체로 
+> 
+![alt text]({C6B73E99-04C4-4914-98F3-10488E430E7D}.png)
+
+
+## 🌟h2 DB의 In-Memory 모드로 설정된 테이블을 H2 콘솔을 이용하여 확인하기  
+
+### 1️⃣ application.properties 파일에서 H2 콘솔 활성화
+```properties
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+``` 
+#### ✔️ 콘솔 활성화 및 경로 설정함(/h2-console). 
+
+### 2️⃣ 애플리케이션 실행 후 브라우저에서 H2 콘솔 열기
+<br/>
+
+> URL: http://localhost:8080/h2-console
+>
+> 데이터베이스 URL: jdbc:h2:mem:test (기본 설정)
+> 
+> 사용자명과 비밀번호는 application.properties에 설정한 값
+
+
+### 3️⃣ 로그인 후 테이블 확인
+<br/>
+
+> H2 콘솔에 접속하여, RUN SCRIPT 또는 SELECT * FROM <테이블명> 등의 SQL 명령어로 데이터베이스 테이블을 확인
