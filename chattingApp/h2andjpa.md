@@ -42,4 +42,8 @@ spring.jpa.properties.hibernate.show_sql=true     # 쿼리 로그 출력
 
 🔹 **spring.jpa.hibernate.ddl-auto** : DDL 자동 생성 옵션. 애플리케이션 실행시 테이블을 삭제하고 새로 생성할 것인지, 새로 생성된 필드만 추가할 것인지 등을 결정함. 
 
+### 테이블 생성 전략 
+![alt text]({A6F115F8-DF27-410E-890B-91A013FA7EB4}.png)
+
 🔹 밑 3줄 : Hiberate가 실행하는 SQL 쿼리를 로그에 출력하게 설정함. 
+
